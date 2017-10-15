@@ -2,7 +2,7 @@
 
 An all-powerful toolset for BiblePay.
 
-[![Build Status](https://travis-ci.org/biblepaypay/Watchman.svg?branch=master)](https://travis-ci.org/biblepaypay/Watchman)
+[![Build Status](https://travis-ci.org/biblepaypay/watchman.svg?branch=master)](https://travis-ci.org/biblepaypay/watchman)
 
 Watchman is an autonomous agent for persisting, processing and automating Biblepay V12.1 governance objects and tasks, and for expanded functions in the upcoming Biblepay V13 release (Tribulation).
 
@@ -31,7 +31,7 @@ Make sure the local Biblepay daemon running is at least version 12.1 (120100)
 
 Clone the Watchman repo and install Python dependencies.
 
-    $ git clone https://github.com/biblepaypay/Watchman.git && cd Watchman
+    $ git clone https://github.com/biblepaypay/watchman.git && cd watchman
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -41,9 +41,9 @@ Set up a crontab entry to call Watchman every minute:
 
     $ crontab -e
 
-In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/Watchman' to the path where you cloned Watchman to:
+In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/watchman' to the path where you cloned Watchman to:
 
-    * * * * * cd /home/YOURUSERNAME/Watchman && ./venv/bin/python bin/Watchman.py >/dev/null 2>&1
+    * * * * * cd /home/YOURUSERNAME/watchman && ./venv/bin/python bin/watchman.py >/dev/null 2>&1
 
 ### 4. Test the Configuration
 
@@ -55,7 +55,7 @@ With all tests passing and crontab setup, Watchman will stay in sync with biblep
 
 ## Configuration
 
-An alternative (non-default) path to the `biblepay.conf` file can be specified in `Watchman.conf`:
+An alternative (non-default) path to the `biblepay.conf` file can be specified in `watchman.conf`:
 
     biblepay_conf=/path/to/biblepay.conf
 
@@ -63,7 +63,7 @@ An alternative (non-default) path to the `biblepay.conf` file can be specified i
 
 To view debug output, set the `WATCHMAN_DEBUG` environment variable to anything non-zero, then run the script manually:
 
-    $ WATCHMAN_DEBUG=1 ./venv/bin/python bin/Watchman.py
+    $ WATCHMAN_DEBUG=1 ./venv/bin/python bin/watchman.py
 
 ## Contributing
 
